@@ -1,0 +1,29 @@
+<h3>Listado de Héroes</h3>
+
+<ul class="mt-2 list-group">
+
+    <h3>Héroe borrado: 
+        @if (borrado) {
+            <small class="text-danger">{{ borrado }}</small> 
+        } @else {
+            <small>No se borro nada</small>
+        }
+    </h3>
+            
+
+    @if (heroNames.length > 0) {
+
+        <button (click)="borrar()" class="w-25 mt-3 mb-3 btn btn-danger">
+            
+            Borrar Ultimo Héroe
+            
+        </button>
+    }
+
+    @for (hero of heroNames; track $index) {
+
+        <li class="lst-group-item">{{ hero }}</li>
+
+    }
+
+</ul>
