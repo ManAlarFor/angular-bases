@@ -6,7 +6,6 @@ import { Character } from '../../interfaces/character.interface';
   standalone: false,
   
   templateUrl: './list.component.html',
-  styleUrl: './list.component.css'
 })
 
 

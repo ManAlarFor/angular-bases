@@ -6,7 +6,6 @@ import { Character } from '../../interfaces/character.interface';
   standalone: false,
   
   templateUrl: './form.component.html',
-  styleUrl: './form.component.css'
 })
 export class FormComponent {
 
