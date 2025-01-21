@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { GifsService } from '../../gifs/services/gifs.service';
 
 @Component({
@@ -10,11 +10,20 @@ import { GifsService } from '../../gifs/services/gifs.service';
 })
 export class SidebarComponent {
 
+  @Output()
+  public reVisiting: EventEmitter<string> = new EventEmitter() ;
+
   constructor( private service:GifsService ) {}
 
   get tags() {
 
     return this.service.tagsHistory ;
+
+  }
+
+  reVisit(search:string){
+
+    this.service.searchTag(search)
 
   }
   
