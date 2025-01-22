@@ -4,22 +4,10 @@
         
         <div class="col-md-3 col-sm-6">
 
-            <div class="card m-2 text-center bg-dark">
+            <app-gifs-card [gif]="gif"></app-gifs-card>
 
-                <img [src]="gif.images.downsized_medium.url" [alt]="gif.title">
-                
-                <div class="card-body text-light">
-                    <p class="card-text">
-                        
-                        {{ gif.title }}
-                        
-                    </p>
-                </div>
-                
-            </div>
-            
         </div>
-        
+
     }
 
 </div>

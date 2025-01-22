@@ -6,7 +6,6 @@ import { Gif } from '../../interfaces/gifs.interfaces';
   standalone: false,
   
   templateUrl: './card-list.component.html',
-  styleUrl: './card-list.component.css'
 })
 export class CardListComponent {
 
