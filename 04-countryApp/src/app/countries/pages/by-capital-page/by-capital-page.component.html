@@ -7,8 +7,9 @@
 
         <!-- Search box -->
          <shared-search-box 
-            (onValue)="searchByCapital($event)"
+            (onDebounce)="searchByCapital($event)"
             placeholder='Buscar por capital'
+            [initialValue]="initialValue"
          ></shared-search-box>
 
     </div>
@@ -18,6 +19,11 @@
 
 <div class="row">
     <div class="col">
+
+        @if (isLoading) {
+            <shared-loading-spinner></shared-loading-spinner>
+        }
+
         <country-table [countries]="countries"></country-table>
     </div>
 </div>

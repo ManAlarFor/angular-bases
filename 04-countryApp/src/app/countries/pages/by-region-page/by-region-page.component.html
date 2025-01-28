@@ -3,13 +3,21 @@
 <hr>
 
 <div class="row">
-    <div class="col">
+    <div class="col text-center">
 
         <!-- Search box -->
-         <shared-search-box 
-            (onValue)="searchByRegion($event)"
-            placeholder='Buscar por continente'
-         ></shared-search-box>
+         @for (continent of continents; track $index) {
+
+            <button 
+                class="btn mx-2"
+                (click)="searchByRegion(continent)"
+                [ngClass]="{ 'btn-outline-primary': (selectedRegion === continent) || (initialRegion === continent) }"
+                
+                >   
+                 {{continent}}
+                 
+            </button>
+        }
 
     </div>
 </div>
@@ -18,6 +26,10 @@
 
 <div class="row">
     <div class="col">
+        @if (isLoading) {
+            <shared-loading-spinner></shared-loading-spinner>
+        }
+
         <country-table [countries]="countries"></country-table>
     </div>
 </div>
