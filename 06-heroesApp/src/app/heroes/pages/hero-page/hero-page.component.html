@@ -1,1 +1,57 @@
-<p>hero-page works!</p>
+@if (hero) {
+
+    <button mat-icon-button (click)="goBack()"><mat-icon>arrow_back</mat-icon></button>
+    <div class="grid">
+
+        
+        <mat-card class="col-6">
+            
+            <mat-card-header>
+                
+                <mat-card-title>
+                    {{hero.superhero}}
+                </mat-card-title>
+
+                <mat-card-subtitle>
+                    {{hero.alter_ego}}
+                </mat-card-subtitle>
+
+                <mat-divider></mat-divider>
+                
+            </mat-card-header>
+            
+            <img src="{{ hero | heroImage }}" alt="Imagen de {{hero.superhero}}">
+            
+        </mat-card>
+        
+        <div class="col-6 mt-3">
+            <h2>Publisher:</h2>
+            <ul>
+                <li>{{hero.publisher}}</li>
+            </ul>
+
+            <h2>Primera Aparición:</h2>
+            <ul>
+                <li>{{hero.first_appearance}}</li>
+            </ul>
+
+            <h2>Multiples versiones:</h2>
+            <ul>
+                @for (name of hero.characters.split(", "); track $index) {
+                    <li>{{name}}</li>
+                }
+            </ul>
+            
+        </div>
+    </div>
+    
+
+} @else {
+
+    <mat-grid-list cols="1">
+        <mat-grid-tile>
+            <mat-spinner></mat-spinner>
+        </mat-grid-tile>
+    </mat-grid-list>
+
+}

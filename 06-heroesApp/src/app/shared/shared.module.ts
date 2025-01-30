@@ -4,6 +4,7 @@ import { Error404PageComponent } from './pages/error404-page/error404-page.compo
 
 
 @NgModule({
+
   declarations: [
     Error404PageComponent
   ],
