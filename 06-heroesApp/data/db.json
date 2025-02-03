@@ -2,25 +2,32 @@
   "users": [
     {
       "id": 1,
-      "usuario": "John Doe",
+      "user": "John Doe",
       "email": "john.due@gmail.com"
     }
   ],
   "heroes": [
+    {
+      "id": "dc-batman",
+      "superhero": "Batman",
+      "publisher": "DC Comics",
+      "alter_ego": "Bruce Wayne",
+      "first_appearance": "Detective Comics #27",
+      "characters": "Bruce Wayne"
+    },
     {
       "id": "dc-superman",
       "superhero": "Superman",
       "publisher": "DC Comics",
       "alter_ego": "Kal-El",
       "first_appearance": "Action Comics #1",
-      "characters": "Kal-El",
-      "alt_img": "https://i.ebayimg.com/images/g/~QEAAOSwIwRholRu/s-l400.jpg"
+      "characters": "Kal-El"
     },
     {
       "id": "dc-flash",
       "superhero": "Flash",
       "publisher": "DC Comics",
-      "alter_ego": "Barry Allen",
+      "alter_ego": "Jay Garrick",
       "first_appearance": "Flash Comics #1",
       "characters": "Jay Garrick, Barry Allen, Wally West, Bart Allen"
     },
@@ -54,7 +61,32 @@
       "publisher": "DC Comics",
       "alter_ego": "J\"onn J\"onzz",
       "first_appearance": "Detective Comics #225",
-      "characters": "Martian Manhunter"
+      "characters": "Mauricio Cazahombres",
+      "alt_img": null
+    },
+    {
+      "id": "dc-robin",
+      "superhero": "Robin/Nightwing",
+      "publisher": "DC Comics",
+      "alter_ego": "Dick Grayson",
+      "first_appearance": "Detective Comics #38",
+      "characters": "Dick Grayson"
+    },
+    {
+      "id": "dc-blue",
+      "superhero": "Blue Beetle",
+      "publisher": "DC Comics",
+      "alter_ego": "Dan Garret",
+      "first_appearance": "Mystery Men Comics #1",
+      "characters": "Dan Garret, Ted Kord, Jaime Reyes"
+    },
+    {
+      "id": "dc-black",
+      "superhero": "Black Canary",
+      "publisher": "DC Comics",
+      "alter_ego": "Dinah Drake",
+      "first_appearance": "Flash Comics #86",
+      "characters": "Dinah Drake, Dinah Lance"
     },
     {
       "id": "marvel-spider",
@@ -129,14 +161,6 @@
       "characters": "Scott Summers"
     },
     {
-      "id": "marvel-silver",
-      "superhero": "Silver Surfer",
-      "publisher": "Marvel Comics",
-      "alter_ego": "Norrin Radd",
-      "first_appearance": "The Fantastic Four #48",
-      "characters": "Norrin Radd"
-    },
-    {
       "id": "hW8u6BB",
       "superhero": "Invincible",
       "alter_ego": "Mark Grayson",
@@ -144,6 +168,15 @@
       "first_appearance": "Invencible #1",
       "characters": "Mark Grayson",
       "alt_img": "https://static1.srcdn.com/wordpress/wp-content/uploads/2024/02/invi_s2c_digitalonesheet_flypunch_1944x2880_pre_nodimple_pv_final_en-us_cps.jpg"
+    },
+    {
+      "id": "Nu5DwoU",
+      "superhero": "Deku",
+      "alter_ego": "Midoriya Izuku",
+      "publisher": "Otras Empresas",
+      "first_appearance": "Boku No Hero #1",
+      "characters": "Midoriya Izuku",
+      "alt_img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQluxTv0CXa91Qt0QdQnp0yGeGaI7qIt5ZRQ&s"
     }
   ]
 }
