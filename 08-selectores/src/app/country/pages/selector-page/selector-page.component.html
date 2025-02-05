@@ -1,0 +1,71 @@
+<h1 class="mt-3">Selectores anidados</h1>
+
+<hr>
+
+<form [formGroup]="myForm">
+
+    <!-- Continentes -->
+    <div class="row mb-3">
+        <div class="col">
+            <label class="form-label">Continente:</label>
+            <select formControlName="region" class="form-control">
+                <option selected value="">-- Seleccione Contienente --</option>
+                
+                @for (region of regions; track $index) {
+                    
+                    <option [value]='region'>{{ region }}</option>
+
+                }
+
+            </select>
+        </div>
+    </div>
+
+    @if ( countriesByRegion.length > 0 ) {
+
+        <!-- Countries -->
+        <div class="row mb-3">
+            <div class="col">
+            <label class="form-label">Paises:</label>
+            <select formControlName="country" class="form-control">
+                <option selected value="">-- Seleccione País --</option>
+                
+                @for (country of countriesByRegion; track $index) {
+                    
+                    <option [value]='country.cca3'>{{ country.name }}</option>
+                    
+                }
+                
+            </select>
+            </div>
+        </div>
+        
+    }
+
+    @if ( borders.length > 0 ) {
+
+        <!-- Borders -->
+        <div class="row mb-3">
+            <div class="col">
+            <label class="form-label">Fronteras:</label>
+            <select formControlName="border" class="form-control">
+                <option selected value="">-- Seleccione Frontera --</option>
+                
+                @for (country of borders; track $index) {
+                    
+                    <option [value]='country.cca3'>{{ country.name }}</option>
+                    
+                }
+                
+            </select>
+            </div>
+        </div>
+        
+    }
+
+</form>
+
+<h3>Formulario</h3>
+<code>
+    {{ myForm.value | json }}
+</code>
