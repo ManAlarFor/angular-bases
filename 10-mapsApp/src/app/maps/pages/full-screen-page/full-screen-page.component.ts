@@ -22,7 +22,8 @@ export class FullScreenPageComponent implements AfterViewInit {
         style:
         'https://api.maptiler.com/maps/hybrid/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL', // stylesheet location
         center: [0, 1], // starting position [lng, lat]
-        zoom: 0 // starting zoom
+        zoom: 0, // starting zoom
+        dragRotate: false
       });
 
       

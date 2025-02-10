@@ -27,7 +27,9 @@ export class ZoomRangePageComponent implements AfterViewInit, OnDestroy {
         style:
         'https://api.maptiler.com/maps/hybrid/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL', // stylesheet location
         center: this.center, // starting position [lng, lat]
-        zoom: this.zoom // starting zoom
+        zoom: this.zoom ,// starting zoom
+        dragRotate: false
+
       });
 
       this.mapListeners() ;
